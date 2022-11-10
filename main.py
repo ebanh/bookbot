@@ -15,11 +15,12 @@ def num_characters(contents):
 
 with open("books/frankenstein.txt") as f:
     file_contents = f.read()
-    
+
+    # pull information from text file
     word_count = count_words(file_contents)
-    char_count = num_characters(file_contents)
-    char_list = list(char_count.items())
-    
+    char_list = list(num_characters(file_contents).items())
+
+    # extract only alpha characters and sort the list
     char_only = []
     for char in char_list:
         if char[0].isalpha():
